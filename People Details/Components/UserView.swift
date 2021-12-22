@@ -14,8 +14,19 @@ struct UserView: View {
     var body: some View {
         HStack {
             ImageViewer(user.picture.large)
+                .scaledToFit()
+                .frame(width: 80, height: 80)
+                .cornerRadius(10)
             
-            Text(user.name.first)
+            VStack(alignment: .leading, spacing: 5) {
+                Text(user.name.fullName)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                
+                Text(user.email)
+                    .font(.body)
+            }
+            
         }
     }
 }

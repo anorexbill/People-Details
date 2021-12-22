@@ -8,7 +8,7 @@
 import Foundation
 
 struct Users: Codable {
-    var data: [User]
+    var results: [User]
 }
 
 struct User: Codable {
@@ -21,6 +21,10 @@ struct Name: Codable {
     var title: String
     var first: String
     var last: String
+    
+    var fullName: String {
+        [title, first, last].joined(separator: " ")
+    }
 }
 
 struct Picture: Codable {

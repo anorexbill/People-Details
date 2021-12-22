@@ -26,7 +26,7 @@ class ContentViewModel: ObservableObject {
             if let data = data {
                 if let decodedResponse = try? JSONDecoder().decode(Users.self, from: data) {
                     DispatchQueue.main.async {
-                        self.users = decodedResponse.data
+                        self.users = decodedResponse.results
                     }
                     return
                 }
