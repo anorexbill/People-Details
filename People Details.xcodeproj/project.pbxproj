@@ -16,6 +16,7 @@
 		8A70958E2772D40900DF2870 /* People_DetailsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A70958D2772D40900DF2870 /* People_DetailsUITestsLaunchTests.swift */; };
 		8A70959C2772D42600DF2870 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A70959B2772D42600DF2870 /* User.swift */; };
 		8AF38606277306F2005847D5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8AF38605277306F2005847D5 /* SDWebImageSwiftUI */; };
+		8AF3860A27730815005847D5 /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3860927730815005847D5 /* ImageViewer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8A70958B2772D40900DF2870 /* People_DetailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People_DetailsUITests.swift; sourceTree = "<group>"; };
 		8A70958D2772D40900DF2870 /* People_DetailsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People_DetailsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8A70959B2772D42600DF2870 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8AF3860927730815005847D5 /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		8ACB324C2773060800014BD6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8AF3860927730815005847D5 /* ImageViewer.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A7095732772D40300DF2870 /* ContentView.swift in Sources */,
+				8AF3860A27730815005847D5 /* ImageViewer.swift in Sources */,
 				8A7095712772D40300DF2870 /* People_DetailsApp.swift in Sources */,
 				8A70959C2772D42600DF2870 /* User.swift in Sources */,
 			);
