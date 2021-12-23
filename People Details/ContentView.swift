@@ -16,8 +16,10 @@ struct ContentView: View {
     }
     
     var body: some View {
-        List(viewModel.users, id: \.email) { user in
-            UserView(user: user)
+        NavigationView {
+            List(viewModel.users, id: \.email) { user in
+                UserView(user: user)
+            }
         }
     }
 }

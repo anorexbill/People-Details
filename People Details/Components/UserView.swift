@@ -13,6 +13,7 @@ struct UserView: View {
     
     var body: some View {
         HStack {
+            
             ImageViewer(user.picture.large)
                 .scaledToFit()
                 .frame(width: 80, height: 80)
@@ -20,19 +21,23 @@ struct UserView: View {
             
             VStack(alignment: .leading, spacing: 5) {
                 Text(user.name.fullName)
-                    .font(.title2)
                     .fontWeight(.bold)
+                    .scaledFont(name: "Chalkboard", size: 24)
                 
                 Text(user.email)
-                    .font(.body)
+                    .fontWeight(.semibold)
+                    .scaledFont(name: "Chalkboard", size: 16)
             }
-            
         }
     }
 }
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView(user: User(name: Name(title: "", first: "", last: ""), email: "", picture: Picture(large: "")))
+        
+        UserView(user: User(name: Name(title: "Mr", first: "Peter ", last: "Parker"), email: "peter@gmail.com", picture: Picture(large: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Macaca_nigra_self-portrait_large.jpg")))
+        
+            .environment(\.sizeCategory, .accessibilityLarge)
+        
     }
 }

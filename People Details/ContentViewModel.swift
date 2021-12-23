@@ -16,7 +16,6 @@ class ContentViewModel: ObservableObject {
         loadData()
     }
     
-    
     func loadData() {
         guard let url = URL(string: "https://randomuser.me/api/?results=20") else { return }
         
@@ -34,5 +33,4 @@ class ContentViewModel: ObservableObject {
             print("Fetch failed: \(error?.localizedDescription ?? "Unknown Error")")
         }.resume()
     }
-    
 }
