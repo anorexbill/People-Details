@@ -18,9 +18,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(viewModel.users, id: \.email) { user in
-                UserView(user: user)
+                
+                Button(action: {}) {
+                    UserView(user: user)
+                }  
             }
+            .navigationTitle("User List")
         }
+        .background(Color.black.opacity(0.1))
     }
 }
 

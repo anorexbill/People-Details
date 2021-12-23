@@ -9,6 +9,8 @@ import SwiftUI
 
 struct UserView: View {
     
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     var user: User
     
     var body: some View {
@@ -28,6 +30,7 @@ struct UserView: View {
                     .fontWeight(.semibold)
                     .scaledFont(name: "Chalkboard", size: 16)
             }
+            .foregroundColor(colorScheme == .dark ? .white : .black)
         }
     }
 }
