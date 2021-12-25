@@ -38,9 +38,12 @@ struct UserView: View {
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
         
-        UserView(user: User(name: Name(title: "Mr", first: "Peter ", last: "Parker"), email: "peter@gmail.com", picture: Picture(large: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Macaca_nigra_self-portrait_large.jpg")))
-        
-            .environment(\.sizeCategory, .accessibilityLarge)
+        List {
+            UserView(user: User(name: Name(title: "Mr", first: "Peter ", last: "Parker"), email: "peter@gmail.com", picture: Picture(large: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Macaca_nigra_self-portrait_large.jpg")))
+            
+            UserView(user: User(name: Name(title: "Mr", first: "Peter ", last: "Parker"), email: "peter@gmail.com", picture: Picture(large: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Macaca_nigra_self-portrait_large.jpg")))
+        }
+        .environment(\.sizeCategory, .accessibilityLarge)
         
     }
 }
